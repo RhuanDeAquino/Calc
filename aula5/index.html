@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>calc</title>
+</head>
+<body>
+    <section>
+        <h1>Caculadora</h1>
+        <form onsubmit="calc(event);">
+            <input type="number" name="Usuario" id="n1" placeholder="Usuario1" required><br>
+            <input type="number" name="Usuario" id="n2" placeholder="Usuario2" required><br>
+
+            <button>GO!</button><br>
+
+            <p></p>
+        </form>
+    </section>
+</body>
+    <script type="text/javascript">
+        function calc(event) {
+        event.preventDefault();    
+        const n1 = document.querySelector('#n1').value;
+        const n2 = document.querySelector('#n2').value;
+        const bt = document.querySelector('button');
+        const p = document.querySelector('p');
+
+        p.innerHTML= 'Vai = ' + (parseInt(n1) + parseInt(n2));
+
+        };
+    </script>
+</html>
